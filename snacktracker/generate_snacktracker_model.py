@@ -96,6 +96,7 @@ rootLogger.debug("labels length is: %d", len(labels))
 
 
 for i in range(n_images):
+    rootLogger.debug("File path at %d is: %s", i, file_paths[i])
     labels[i] = CLASSES.index(file_paths[i].split("/")[-2])
 
 test_n_images = testimages.shape[0]
