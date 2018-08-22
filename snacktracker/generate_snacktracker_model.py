@@ -91,6 +91,10 @@ testimages = testimages / 255
 n_images = images.shape[0]
 labels = np.zeros(n_images)
 
+rootLogger.debug("n_images length is: %d", len(n_images))
+rootLogger.debug("labels length is: %d", len(labels))
+
+
 for i in range(n_images):
     labels[i] = CLASSES.index(file_paths[i].split("/")[-2])
 
