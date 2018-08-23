@@ -23,7 +23,12 @@ from keras.preprocessing.image import ImageDataGenerator
 # ==================================================
 CLASSES = [
     "PlantersPeanuts",
-    "SmartFoodPopcorn"
+    "SmartFoodPopcorn",
+    "NatureValleyAlmond",
+    "Pistachios",
+    "PopCorners",
+    "SunChips",
+    "SweetPotatoChips"
 ]
 
 #parse args
