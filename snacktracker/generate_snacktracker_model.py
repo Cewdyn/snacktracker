@@ -28,7 +28,14 @@ CLASSES = [
     "Pistachios",
     "PopCorners",
     "SunChips",
-    "SweetPotatoChips"
+    "SweetPotatoChips",
+    "NutrigrainBlueberry",
+    "RXBARPeanutButter",
+    "ZooAnimalCrackers",
+    "SnackWellsCremeSandwich",
+    "KarsAlmonds",
+    "StacysCinnamonPita",
+    "CheeseIts"
 ]
 
 #parse args
