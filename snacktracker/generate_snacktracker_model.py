@@ -96,14 +96,13 @@ rootLogger.debug("labels length is: %d", len(labels))
 
 
 for i in range(n_images):
-    rootLogger.debug("File path at %d is: %s", i, file_paths[i])
-    labels[i] = CLASSES.index(file_paths[i].split("/")[-2])
+    labels[i] = CLASSES.index(file_paths[i].split("\\")[-2])
 
 test_n_images = testimages.shape[0]
 testlabels = np.zeros(test_n_images)
 
 for i in range(test_n_images):
-    testlabels[i] = CLASSES.index(testing_file_paths[i].split("/")[-2])
+    testlabels[i] = CLASSES.index(testing_file_paths[i].split("\\")[-2])
 
 #Convert for Keras readable labels
 labels_hot = to_categorical(labels)
@@ -136,8 +135,8 @@ model.add(Dropout(0.5))
 model.add(Dense(len(CLASSES), activation='softmax'))
 
 
-batch_size = 100
-epochs = 1
+batch_size = 256
+epochs = 50
 model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
 
 datagen = ImageDataGenerator(
@@ -178,4 +177,5 @@ plt.xlabel('Epochs ',fontsize=16)
 plt.ylabel('Accuracy',fontsize=16)
 plt.title('Accuracy Curves',fontsize=16)
 
+plt.show()
 
