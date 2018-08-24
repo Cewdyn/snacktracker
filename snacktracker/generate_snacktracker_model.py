@@ -53,7 +53,7 @@ args = vars(argParser.parse_args())
 logFormatter = logging.Formatter("%(asctime)s [%(threadName)-12.12s] [%(levelname)-5.5s]  %(message)s")
 rootLogger = logging.getLogger()
 
-fileHandler = logging.FileHandler("snacktracker.log")
+fileHandler = logging.FileHandler("generate_snacktracker.log")
 fileHandler.setFormatter(logFormatter)
 rootLogger.addHandler(fileHandler)
 
